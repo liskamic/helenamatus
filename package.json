@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-notify": "^3.0.0",
+    "gulp-order": "latest",
+    "gulp-rename": "latest",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  }
+}
