@@ -177,6 +177,22 @@
 
 	}
 
+	// Scrolling navigation
+
+	// ------------------------------
+    // https://twitter.com/mattsince87
+    // ------------------------------
+    var scrollNav = function () {
+      $('.nav a').click(function(){
+        //Animate
+        $('html, body').stop().animate({
+            scrollTop: $( $(this).attr('href') ).offset().top - 160
+        }, 400);
+        return false;
+      });
+      $('.scrollTop a').scrollTop();
+    };
+
 	// Document on load.
 
 	$(function(){
@@ -186,6 +202,7 @@
 		mobileMenuOutsideClick();
 		contentWayPoint();
 		stickyBanner();
+        scrollNav();
 	});
 
 
