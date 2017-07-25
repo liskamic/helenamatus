@@ -984,7 +984,7 @@ google.maps.event.addDomListener(window, 'load', init);
             // + minutes + "Minutes " + seconds + "Seconds ";
 
             // Display the result in an element with id="demo"
-            document.getElementById("days").innerHTML = days + " <small>dní</small>";
+            document.getElementById("days").innerHTML = days + " <small>dni</small>";
             document.getElementById("hours").innerHTML = hours + " <small>hodín</small> ";
             document.getElementById("minutes").innerHTML = minutes + " <small>minút</small> ";
             document.getElementById("seconds").innerHTML = seconds + " <small>sekúnd</small> ";

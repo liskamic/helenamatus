@@ -575,12 +575,12 @@ figure {
 
 #fh5co-couple,
 #fh5co-countdown,
-#fh5co-groom-bride,
-#fh5co-blog-section,
 #fh5co-started,
 #fh5co-when-where,
-#fh5co-guest,
+#fh5co-accommodation,
+#fh5co-transport,
 #fh5co-gallery,
+#fh5co-tips,
 .fh5co-content-section {
 	padding: 7em 0;
 	@media screen and (max-width: $screen-sm) {
@@ -678,6 +678,8 @@ figure {
 //Events
 .wedding-events{
 	background: $brand-white;
+    min-height: 100%;
+    height: 100%;
 	.ceremony-bg{
 		background-size: cover;
 		background-position: center center;
@@ -1219,5 +1221,19 @@ figure {
 	z-index: 9999;
 	background: url(../images/hourglass.svg) center no-repeat #222222;
 }
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 
 

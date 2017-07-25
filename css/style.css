@@ -529,12 +529,12 @@ figure {
 
 #fh5co-couple,
 #fh5co-countdown,
-#fh5co-groom-bride,
-#fh5co-blog-section,
 #fh5co-started,
 #fh5co-when-where,
-#fh5co-guest,
+#fh5co-accommodation,
+#fh5co-transport,
 #fh5co-gallery,
+#fh5co-tips,
 .fh5co-content-section {
   padding: 7em 0;
 }
@@ -542,12 +542,12 @@ figure {
 @media screen and (max-width: 768px) {
   #fh5co-couple,
   #fh5co-countdown,
-  #fh5co-groom-bride,
-  #fh5co-blog-section,
   #fh5co-started,
   #fh5co-when-where,
-  #fh5co-guest,
+  #fh5co-accommodation,
+  #fh5co-transport,
   #fh5co-gallery,
+  #fh5co-tips,
   .fh5co-content-section {
     padding: 4em 0;
   }
@@ -1269,7 +1269,7 @@ figure {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
- }
+}
 
 @media (min-width: 768px) {
   .row.equal {
