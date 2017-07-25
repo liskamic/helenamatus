@@ -745,26 +745,77 @@ function init() {
 
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-    
-    var addresses = ['48.7290,21.2514','48.72439,21.24649','48.71855,21.24299'];
-    var addressesMap = [{c: '48.7290,21.2514', t: 'Sobáš'},{c: '48.72439,21.24649', t: 'Hostina'},{c: '48.71855,21.24299',t: 'Ubytovanie'}];
-var tmp;
-    for (var x = 0; x < addresses.length; x++) {
-//        tmp = addresses[x].t;
-//            alert('A:'+t);
-        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x], null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-//            alert(latlng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map,
-                icon: 'images/loc.png',
-//                title: t
-            });
 
+    //TODO Figure out how to do it in a loop!
+    $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=48.7290,21.2514', null, function (data) {
+        var p = data.results[0].geometry.location
+        var latlng = new google.maps.LatLng(p.lat, p.lng);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            icon: 'images/loc-ceremony.png',
+            title: 'Sobáš',
+            url: 'https://goo.gl/maps/m94Ccqg1Xt32'
         });
-    }
+
+        google.maps.event.addListener(marker, 'click', function() {
+                   window.location.href = this.url;
+        });
+
+    });
+    $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=48.72439,21.24649', null, function (data) {
+        var p = data.results[0].geometry.location
+        var latlng = new google.maps.LatLng(p.lat, p.lng);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            icon: 'images/loc-party.png',
+            title: 'Hostina',
+            url: 'https://goo.gl/maps/JnQ24mwt5ZT2'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+                   window.location.href = this.url;
+        });
+
+    });
+    $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=48.71855,21.24299', null, function (data) {
+        var p = data.results[0].geometry.location
+        var latlng = new google.maps.LatLng(p.lat, p.lng);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            icon: 'images/loc-accommodation.png',
+            title: 'Ubytovanie',
+            url: 'https://goo.gl/maps/3j7u27U9VJ52'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+                   window.location.href = this.url;
+        });
+
+    });
+
+//
+//    var addresses = ['48.7290,21.2514','48.72439,21.24649','48.71855,21.24299'];
+//    var addressesMap = [{c: '48.7290,21.2514', t: 'Sobáš'},{c: '48.72439,21.24649', t: 'Hostina'},{c: '48.71855,21.24299',t: 'Ubytovanie'}];
+//var tmp;
+//    for (var x = 0; x < addresses.length; x++) {
+////        tmp = addresses[x].t;
+////            alert('A:'+t);
+//        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x], null, function (data) {
+//            var p = data.results[0].geometry.location
+//            var latlng = new google.maps.LatLng(p.lat, p.lng);
+////            alert(latlng);
+//            new google.maps.Marker({
+//                position: latlng,
+//                map: map,
+//                icon: 'images/loc.png',
+////                title: t
+//            });
+//
+//        });
+//    }
     
 }
 google.maps.event.addDomListener(window, 'load', init);
